@@ -93,7 +93,17 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.5s ease, height 0.2s ease;
+}
+
+.wrapper.active-popun {
+  transform: scale(1);
+}
+
+.wrapper.active {
+  height: 520px;
 }
 
 .wrapper .form-box {
@@ -102,7 +112,24 @@ header {
 }
 
 .wrapper .form-box.login {
-  display: none;
+  transition: transform 0.18s ease;
+  transform: translateX(0px);
+}
+
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0px);
 }
 
 .wrapper .icon-close {
@@ -145,11 +172,11 @@ header {
   color: #162938;
   font-weight: 500;
   pointer-events: none;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.input-box input:focus~label,
-.input-box input:valid~label{
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
   top: -5px;
 }
 
@@ -174,7 +201,7 @@ header {
 }
 
 .remember-forgot {
-  font-size: .9em;
+  font-size: 0.9em;
   color: #162938;
   font-weight: 500;
   margin: -15px 0 15px;
@@ -183,7 +210,7 @@ header {
 }
 
 .remember-forgot label input {
-  accent-color: #162938 ;
+  accent-color: #162938;
   margin-right: 3px;
 }
 
@@ -210,7 +237,7 @@ header {
 }
 
 .login-register {
-  font-size: .9em;
+  font-size: 0.9em;
   color: #162938;
   text-align: center;
   font-weight: 500;
