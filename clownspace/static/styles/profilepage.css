@@ -11,6 +11,8 @@ body {
 
 /* настройки отдельных блоков */
 
+/* 1111настройка оболочки и хедера */
+
 .wrapper {
     position: relative;
     height: 1844px;
@@ -33,14 +35,44 @@ body {
     top: 0;
     min-height: 2em;
     border-bottom: 1px solid rgb(158, 156, 156);
-    line-height: 50px;
+    line-height: 70px;
     background-color: white;
     
 }
 
+/* контент див */
+
 .main {
     flex: 1 1 auto;
 }
+
+.profilepic {
+    margin-top: 42px;
+    margin-left: 50px;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    display: inline-block;
+
+}
+
+
+/* настройки самой пикчи */
+.profilepic1 {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
 
 .statusbar {
     display: flex;
