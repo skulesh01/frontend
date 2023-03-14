@@ -1,0 +1,25 @@
+.main {
+    position: relative;
+width: 390px;
+height: 844px;
+
+background: #e95555;
+}
+
+.search_button {
+    position: absolute;
+width: 40px;
+height: 115px;
+left: 320px;
+top: 520px;
+color: azure;
+}
+
+.penis {
+    position: absolute;
+left: 82.05%;
+right: 7.69%;
+top: 61.61%;
+bottom: 33.89%;
+
+}
