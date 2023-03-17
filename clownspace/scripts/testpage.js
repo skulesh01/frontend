@@ -1,9 +1,13 @@
-const share = document.querySelector(".share");
-const wrappershare = document.querySelector(".wrappershare");
+const share = document.getElementById("share");
+const wrappershare = document.getElementById("wrappershare");
 
+share.addEventListener("click", () => {
+  wrappershare?.classList.add("wrapperactive");
+});
 
-wrappershare.addEventListener("click", () => {
-    wrappershare.classList.contains("lbactive")
-      ? wrappershare.classList.remove("lbactive")
-      : wrappershare.classList.add("lbactive");
-  });
+document.addEventListener("click", (event) => {
+  console.log('click', event.target);
+  event.target !== share && event.target !== wrappershare
+    ? wrappershare?.classList.remove("wrapperactive")
+    : null;
+});
