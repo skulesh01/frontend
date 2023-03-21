@@ -1,31 +1,87 @@
 const share = document.getElementById("share");
 const wrappershare = document.getElementById("wrappershare");
-const avatar = document.getElementById("avatar")
+const avatar = document.getElementById("avatar");
 
+// const likeButton = document.querySelector(".like-button");
+const likeButton = document.getElementById("like");
+const FollowButton = document.getElementById("follow");
+
+//обработка лайка
+likeButton.addEventListener("click", () => {
+  if (likeButton.classList.contains("lbactive")) {
+    likeButton.classList.remove("lbactive");
+    sendRequest("/like", { likeCount });
+  } else {
+    likeButton.classList.add("lbactive");
+    sendRequest("/like", { likeCount });
+  }
+});
+
+function sendRequest(url, data) {
+  const xhr = new XMLHttpRequest();
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.open("POST", url);
+  xhr.send(JSON.stringify(data));
+  console.log(data);
+}
+
+//follow
+FollowButton.addEventListener("click", () => {
+  FollowButton.classList.contains("lbactive")
+    ? (FollowButton.classList.remove("lbactive"),
+      (FollowButton.textContent = "Follow"))
+    : (FollowButton.classList.add("lbactive"),
+      (FollowButton.textContent = "Unfollow"));
+});
+
+// переход в профиль
+document.getElementById("person").onclick = function () {
+  window.location.href = "./profilepage.html";
+};
+document.getElementById("ava").onclick = function () {
+  console.log("text");
+  window.location.href = "./profilepage.html";
+};
+document.getElementById("hppp").onclick = function () {
+  window.location.href = "./profilepage.html";
+};
+
+// всплывающее окно
 share.addEventListener("click", () => {
   wrappershare?.classList.add("wrapperactive");
 });
 
 document.addEventListener("click", (event) => {
-  console.log('click', event.target);
+  console.log("click", event.target);
   event.target !== share && event.target !== wrappershare
     ? wrappershare?.classList.remove("wrapperactive")
     : null;
 });
 
-avatar.addEventListener("click", () => {
- avatar.src='http://185.251.91.19/files/photos/05527559-b8c0-49c4-b07c-68bf04be583c&163971-zvezdolet-kompaniya_spacex-probel_x-kosmicheskij_ekipazh_1-mezhdunarodnaya_kosmicheskaya_stanc-1920x1080.jpg';
-});
+// avatar.addEventListener("click", () => {
+//  avatar.src='http://185.251.91.19/files/photos/05527559-b8c0-49c4-b07c-68bf04be583c&163971-zvezdolet-kompaniya_spacex-probel_x-kosmicheskij_ekipazh_1-mezhdunarodnaya_kosmicheskaya_stanc-1920x1080.jpg';
+// });
 
-// fetch('http://example.com/image.jpg')
-//   .then(response => response.blob()) // Преобразуем ответ в объект blob
-//   .then(blob => {
-//     // Создаем объект URL из полученного blob
-//     const url = URL.createObjectURL(blob);
-//     // Создаем изображение на основе URL
-//     const image = new Image();
-//     image.src = url;
-//     // Добавляем изображение на страницу
-//     document.body.appendChild(image);
-//   })
-//   .catch(error => console.error(error)); // Обрабатываем ошибки
+// const request = new XMLHttpRequest();
+// const url = 'https://example.com/video-links?userid=1234&videoid=1';
+// const userId = '1234';
+// const videoId = '1';
+
+// request.open('GET', url);
+// request.setRequestHeader('Content-Type', 'application/json');
+// request.onload = function() {
+//   if (request.status === 200) {
+//     const response = JSON.parse(request.responseText);
+//     console.log(response.video_links);
+//   } else {
+//     console.log('Пошел ты нахер со своим видео. Ошибка ' + request.status);
+//   }
+// };
+
+// const data = {
+//   request_type: 'get_video_links',
+//   user_id: userId,
+//   video_id: videoId
+// };
+
+// request.send(JSON.stringify(data));

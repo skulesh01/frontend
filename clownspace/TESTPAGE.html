@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEST</title>
     <link rel="stylesheet" href="static/styles/TESTPAGE.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 </head>
 <body>
     <div class="wrapper">
         <main class="main" id="main">
                         <!-- 1. всплывающее окно начало -->
-                        <div class="wrappershare" id="wrappershare"></div>
+                        <div class="wrappershare" id="wrappershare">
+                            <p  class="wrappertext">Иди нахуй</p>
+                        </div>
+
                         <!-- 1. всплывающее окно конец -->
             <div class="sitebar">
                 <div class="likesave__button">
-                    <span class="material-symbols-outlined"> favorite </span>
+                    <span class="material-symbols-outlined" id="like"> favorite </span>
                     <p>1</p>
                 </div>
                 <div class="likesave__button">
@@ -27,14 +30,14 @@
             <div class="videoFooter">
                 
                 <div class="Avatar"> 
-                    <img src="static/images/New Project.png" alt="" id = 'avatar'>
+                    <img src="static/images/New Project.png" alt="" id = 'ava'>
                 </div>
                 
                 <div class="fideoFooter__text">
 
                     <div>
-                        <h3> homelessporn</h3>
-                        <button class="button"> Follow </button>
+                        <h3 id="hppp"> homelessporn</h3>
+                        <button class="button" id="follow"> Follow </button>
                         <div class="tag"> 
                             <p> #sex #sex #sex #sex</p>
                         </div>
@@ -66,7 +69,7 @@
                 </div>
     
                 <div class="topbutton">
-                    <span class="material-symbols-outlined"> person </span>
+                    <span class="material-symbols-outlined" id="person"> person </span>
             </div>
         </footer>
     </div>
