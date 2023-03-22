@@ -5,14 +5,19 @@ const avatar = document.getElementById("avatar");
 // const likeButton = document.querySelector(".like-button");
 const likeButton = document.getElementById("like");
 const FollowButton = document.getElementById("follow");
+const t = 1;
+const f = 0;
 
 //обработка лайка
+
 likeButton.addEventListener("click", () => {
   if (likeButton.classList.contains("lbactive")) {
     likeButton.classList.remove("lbactive");
+    var data = JSON.stringify({ account: name.value, position: f.value });
     sendRequest("/like", { likeCount });
   } else {
     likeButton.classList.add("lbactive");
+    var data = JSON.stringify({ name: name.value, lastname: t.value });
     sendRequest("/like", { likeCount });
   }
 });
