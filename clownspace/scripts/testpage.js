@@ -13,22 +13,32 @@ const f = 0;
 likeButton.addEventListener("click", () => {
   if (likeButton.classList.contains("lbactive")) {
     likeButton.classList.remove("lbactive");
-    var data = JSON.stringify({ account: name.value, position: f.value });
-    sendRequest("/like", { likeCount });
+    sendRequest("/like", { likeCount: 1 });
   } else {
     likeButton.classList.add("lbactive");
-    var data = JSON.stringify({ name: name.value, lastname: t.value });
-    sendRequest("/like", { likeCount });
+    sendRequest("/like", { likeCount: 2 });
   }
 });
 
 function sendRequest(url, data) {
   const xhr = new XMLHttpRequest();
+  xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.open("POST", url);
   xhr.send(JSON.stringify(data));
   console.log(data);
 }
+
+//проверка отправки, вставить вместо
+// xhr.send(JSON.stringify(data));
+// console.log(data);
+// xhr.onreadystatechange = function() {
+//   if(xhr.readyState === XMLHttpRequest.DONE) {
+//     console.log(xhr.responseText);
+//   }
+// }
+// xhr.send(JSON.stringify(data));
+// }
+
 
 //follow
 FollowButton.addEventListener("click", () => {
@@ -56,11 +66,14 @@ share.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (event) => {
-  
   event.target !== share && event.target !== wrappershare
     ? wrappershare?.classList.remove("wrapperactive")
     : null;
 });
+
+//вставка видео
+
+
 
 // avatar.addEventListener("click", () => {
 //  avatar.src='http://185.251.91.19/files/photos/05527559-b8c0-49c4-b07c-68bf04be583c&163971-zvezdolet-kompaniya_spacex-probel_x-kosmicheskij_ekipazh_1-mezhdunarodnaya_kosmicheskaya_stanc-1920x1080.jpg';
