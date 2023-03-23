@@ -44,7 +44,6 @@ document.getElementById("person").onclick = function () {
   window.location.href = "./profilepage.html";
 };
 document.getElementById("ava").onclick = function () {
-  console.log("text");
   window.location.href = "./profilepage.html";
 };
 document.getElementById("hppp").onclick = function () {
@@ -57,7 +56,7 @@ share.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (event) => {
-  console.log("click", event.target);
+  
   event.target !== share && event.target !== wrappershare
     ? wrappershare?.classList.remove("wrapperactive")
     : null;
