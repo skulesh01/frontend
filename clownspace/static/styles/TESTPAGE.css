@@ -5,6 +5,7 @@
 
 .topbutton .material-symbols-outlined {
   color: rgb(255, 255, 255);
+ 
 }
 
 .topbutton {
@@ -20,6 +21,14 @@ body {
   width: 100%;
   /* min-width: 300px;
     min-height: 300px; */
+}
+
+.backfon {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.558);
+  opacity: none;
 }
 
 .wrapper {
