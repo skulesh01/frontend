@@ -23,13 +23,13 @@ body {
     min-height: 300px; */
 }
 
-.backfon {
+/* .backfon {
   height: 100%;
   width: 100%;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.558);
   opacity: none;
-}
+} */
 
 .wrapper {
   /* min-width: 10%;

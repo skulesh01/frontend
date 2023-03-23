@@ -24,8 +24,12 @@ function sendRequest(url, data) {
   const xhr = new XMLHttpRequest();
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      console.log(xhr.responseText);
+    }
+  };
   xhr.send(JSON.stringify(data));
-  console.log(data);
 }
 
 //проверка отправки, вставить вместо
@@ -38,7 +42,6 @@ function sendRequest(url, data) {
 // }
 // xhr.send(JSON.stringify(data));
 // }
-
 
 //follow
 FollowButton.addEventListener("click", () => {
@@ -72,8 +75,6 @@ document.addEventListener("click", (event) => {
 });
 
 //вставка видео
-
-
 
 // avatar.addEventListener("click", () => {
 //  avatar.src='http://185.251.91.19/files/photos/05527559-b8c0-49c4-b07c-68bf04be583c&163971-zvezdolet-kompaniya_spacex-probel_x-kosmicheskij_ekipazh_1-mezhdunarodnaya_kosmicheskaya_stanc-1920x1080.jpg';
