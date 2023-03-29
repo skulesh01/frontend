@@ -14,7 +14,7 @@ function App() {
       }}
     >
       {currenLike}
-      <Feed setCurrentLice={setCurrentLice} />
+      <Feed setCurrentLice={like} />
       <Feed />
       <footer style={{ height: "100%" }}>loh</footer>
     </main>
