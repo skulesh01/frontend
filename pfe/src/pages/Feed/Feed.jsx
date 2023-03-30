@@ -1,8 +1,27 @@
-function Feed({ style, setCurrentLice }) {
+function Feed() {
   return (
-    <div onClick={() => setCurrentLice && setCurrentLice((like) => like + 1)}>
-      Feed
-    </div>
+    <main
+      style={{
+        // display: "flex",
+        height: "100vh",
+        width: "100vw",
+      }}
+    >
+      <div className="sitebar" style={{}}>
+        <div class="likesave__button">
+          <span class="material-symbols-outlined" id="like">
+            favorite
+          </span>
+          <p>1</p>
+        </div>
+        <div class="likesave__button">
+          <span class="material-symbols-outlined" id="share">
+            share
+          </span>
+          <p>1</p>
+        </div>
+      </div>
+    </main>
   );
 }
 
