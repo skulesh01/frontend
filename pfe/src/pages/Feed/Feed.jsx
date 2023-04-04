@@ -1,26 +1,16 @@
+import Sidebar from "../../components/Elements/Sidebar/Sidebar";
+import Like from "D:/GitHub/frontend/pfe/src/components/Elements/Like/Like";
+import Follow from "../../components/Elements/Sidebar/Follow/Follow";
+import BottomBar from "../../components/Elements/BottomBar/BottomBar";
+
 function Feed() {
   return (
-    <main
-      style={{
-        // display: "flex",
-        height: "100vh",
-        width: "100vw",
-      }}
-    >
-      <div className="sitebar" style={{}}>
-        <div class="likesave__button">
-          <span class="material-symbols-outlined" id="like">
-            favorite
-          </span>
-          <p>1</p>
-        </div>
-        <div class="likesave__button">
-          <span class="material-symbols-outlined" id="share">
-            share
-          </span>
-          <p>1</p>
-        </div>
-      </div>
+    <main style={{ height: "100vh", width: "100vw", userSelect: "none" }}>
+      <Sidebar>
+        <Like></Like>
+        <Follow></Follow>
+      </Sidebar>
+      <BottomBar></BottomBar>
     </main>
   );
 }

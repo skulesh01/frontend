@@ -1,23 +1,13 @@
 import axios from "axios";
-const baseUrl = "localhost:8000";
+const baseUrl = "http://localhost:8000";
 
-// export function sendRequest(url, data) {
-//     const xhr = new XMLHttpRequest();
-//     xhr.open("POST", url, true);
-//     xhr.setRequestHeader("Content-Type", "application/json");
-//     xhr.onreadystatechange = function () {
-//       if (xhr.readyState === XMLHttpRequest.DONE) {
-//         console.log(xhr.responseText);
-//       }
-//     };
-//     xhr.send(JSON.stringify(data));
-//   }
-
-export const sendLike = (url, likeStatus, setLikeCounter) => {
+export const sendLike = async (endpoint, likeCount, setLikeCount) => {
   try {
-    const response = axios.post(baseUrl + url, { likeCount: likeStatus });
-    setLikeCounter(response?.data?.likeCounter);
+    const response = await axios.post(baseUrl + endpoint, { likeCount });
+    setLikeCount(response?.data?.likeCounter ?? 0);
   } catch (error) {
-    console.error(error);
+    // handle error more gracefully
+    console.error("Failed to send like:", error);
+    // inform user, show error message on UI, etc.
   }
 };
