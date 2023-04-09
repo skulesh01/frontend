@@ -3,7 +3,7 @@ function Person() {
     <span
       class="material-symbols-outlined"
       id="person"
-      style={{ position: "fixed", left: "50%", bottom: "0%" }}
+      style={{ position: "absolute", left: "50%", bottom: "0%" }}
     >
       {" "}
       person{" "}

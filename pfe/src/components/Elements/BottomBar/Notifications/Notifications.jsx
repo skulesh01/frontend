@@ -2,7 +2,7 @@ function Notifications() {
   return (
     <span
       class="material-symbols-outlined"
-      style={{ position: "fixed", left: "25%", bottom: "0%" }}
+      style={{ position: "absolute", left: "25%", bottom: "0%" }}
     >
       {" "}
       notifications_active{" "}

@@ -1,11 +1,12 @@
+import React from "react";
+
 function Grid() {
   return (
     <span
       class="material-symbols-outlined"
-      style={{ position: "fixed", left: "1%", bottom: "0%" }}
+      style={{ position: "absolute", left: "1%", bottom: "0%" }}
     >
-      {" "}
-      grid_3x3{" "}
+      grid_3x3
     </span>
   );
 }

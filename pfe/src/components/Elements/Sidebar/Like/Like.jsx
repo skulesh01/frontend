@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { sendLike } from "D:/GitHub/frontend/pfe/src/API/sendRequest";
+import { sendLike } from "../../../../API/sendRequest";
+import React, { useEffect, useState } from "react";
 
 const Like = () => {
   const [like, setLike] = useState(false);

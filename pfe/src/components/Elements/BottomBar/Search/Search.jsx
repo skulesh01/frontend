@@ -2,7 +2,7 @@ function Search() {
   return (
     <span
       class="material-symbols-outlined"
-      style={{ position: "fixed", left: "75%", bottom: "0%" }}
+      style={{ position: "absolute", left: "75%", bottom: "0%" }}
     >
       {" "}
       search{" "}

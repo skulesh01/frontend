@@ -7,7 +7,7 @@ function VideoFooter({ children }) {
 
       <div className="VideoFooterText">
         <div>
-          <h4>Account</h4>
+          <h5 style={{ margin: "0" }}>Account</h5>
           <button className="button" id="follow">
             Follow
           </button>

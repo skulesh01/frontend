@@ -2,7 +2,7 @@ function Subscriptions() {
   return (
     <span
       class="material-symbols-outlined"
-      style={{ position: "fixed", left: "95%", bottom: "0%" }}
+      style={{ position: "absolute", left: "95%", bottom: "0%" }}
     >
       {" "}
       subscriptions{" "}

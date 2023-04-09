@@ -1,4 +1,3 @@
-import React from "react";
 import Grid from "./Grid/Grid";
 import Notifications from "./Notifications/Notifications";
 import Person from "./Preson/Person";
@@ -9,8 +8,8 @@ function BottomBar({ children }) {
   return (
     <div
       style={{
-        position: "absolute",
-        bottom: "0",
+        position: "fixed",
+        bottom: "0px",
         height: "10vh",
         minHeight: "30px",
         width: "100vw",
